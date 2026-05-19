@@ -1,69 +1,36 @@
 extends Node3D
 
-var count = 0
+@export_file("*.tscn") var next_level_scene: String = "res://scenes/level_2.tscn"
 
-var finish = false
+var total_gates: int = 0
+var count: int = 0
+var finish: bool = false
 
-var pas = false
-
-
-func _process(delta: float) -> void:
-	if finish == true:
-		if count == 9:
-			pas = true	
+func _ready() -> void:
+	var gates = get_tree().get_nodes_in_group("gates")
+	total_gates = gates.size()
 	
+	for gate in gates:
+		if gate.has_signal("body_entered"):
+			gate.body_entered.connect(_on_any_gate_entered)
+			
+	var final_gates = get_tree().get_nodes_in_group("final_gate")
+	if final_gates.size() > 0:
+		if final_gates[0].has_signal("body_entered"):
+			final_gates[0].body_entered.connect(_on_final_gate_entered)
 
-	if pas == true:
-		get_tree().change_scene_to_file('res://scenes/level_2.tscn')
+func _physics_process(delta: float) -> void:
+	if has_node("Player"):
+		$Player/Neck/Camera3D/Label.text = "Gates left: " + str(total_gates - count)
+		
+	if finish and count >= total_gates:
+		if next_level_scene != "":
+			get_tree().change_scene_to_file(next_level_scene)
 
-
-func _on_gate_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-	
-
-
-
-func _on_gate_2_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_3_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_4_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
+func _on_any_gate_entered(body: Node3D) -> void:
+	if body.name == "Player" or body.is_in_group("player"):
 		count += 1
 
-
-func _on_gate_5_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_6_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_7_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_8_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_gate_9_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
-		count += 1
-
-
-func _on_finall_gate_body_entered(body: Node3D) -> void:
-	if body.name == 'Player':
+func _on_final_gate_entered(body: Node3D) -> void:
+	if body.name == "Player" or body.is_in_group("player"):
 		finish = true

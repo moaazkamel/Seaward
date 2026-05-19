@@ -62,7 +62,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70.961075)
 
 [node name="Gates" type="Node" parent="." unique_id=1106119168]
 
-[node name="Gate" type="Area3D" parent="Gates" unique_id=606081745]
+[node name="Gate" type="Area3D" parent="Gates" unique_id=606081745 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5782404, 0, -61.580086)
 
 [node name="gate2" parent="Gates/Gate" unique_id=388256741 instance=ExtResource("2_bswci")]
@@ -72,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate2" type="Area3D" parent="Gates" unique_id=566143267]
+[node name="Gate2" type="Area3D" parent="Gates" unique_id=566143267 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2756166, 0, -42.483948)
 
 [node name="gate2" parent="Gates/Gate2" unique_id=1315252116 instance=ExtResource("2_bswci")]
@@ -82,7 +82,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate3" type="Area3D" parent="Gates" unique_id=576804405]
+[node name="Gate3" type="Area3D" parent="Gates" unique_id=576804405 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.506033, 0, -23.414165)
 
 [node name="gate2" parent="Gates/Gate3" unique_id=1053881731 instance=ExtResource("2_bswci")]
@@ -92,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate4" type="Area3D" parent="Gates" unique_id=1596527261]
+[node name="Gate4" type="Area3D" parent="Gates" unique_id=1596527261 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5070915, 0, -5.574684)
 
 [node name="gate2" parent="Gates/Gate4" unique_id=1710637024 instance=ExtResource("2_bswci")]
@@ -102,7 +102,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate5" type="Area3D" parent="Gates" unique_id=293885610]
+[node name="Gate5" type="Area3D" parent="Gates" unique_id=293885610 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.648917, 0, 10.797636)
 
 [node name="gate2" parent="Gates/Gate5" unique_id=1671022071 instance=ExtResource("2_bswci")]
@@ -112,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate6" type="Area3D" parent="Gates" unique_id=1164451250]
+[node name="Gate6" type="Area3D" parent="Gates" unique_id=1164451250 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.029064, 0, 26.01038)
 
 [node name="gate2" parent="Gates/Gate6" unique_id=1612621022 instance=ExtResource("2_bswci")]
@@ -122,7 +122,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate7" type="Area3D" parent="Gates" unique_id=1792662052]
+[node name="Gate7" type="Area3D" parent="Gates" unique_id=1792662052 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20384407, 0, 41.68571)
 
 [node name="gate2" parent="Gates/Gate7" unique_id=1743637408 instance=ExtResource("2_bswci")]
@@ -132,7 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate8" type="Area3D" parent="Gates" unique_id=1108015536]
+[node name="Gate8" type="Area3D" parent="Gates" unique_id=1108015536 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9710217, 0, 57.0657)
 
 [node name="gate2" parent="Gates/Gate8" unique_id=1104850215 instance=ExtResource("2_bswci")]
@@ -142,7 +142,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="Gate9" type="Area3D" parent="Gates" unique_id=1478316928]
+[node name="Gate9" type="Area3D" parent="Gates" unique_id=1478316928 groups=["gates"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8727264, 0, 73.87531)
 
 [node name="gate2" parent="Gates/Gate9" unique_id=1156317373 instance=ExtResource("2_bswci")]
@@ -152,7 +152,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
 shape = SubResource("BoxShape3D_rus8k")
 
-[node name="finall gate" type="Area3D" parent="Gates" unique_id=297486023]
+[node name="finall gate" type="Area3D" parent="Gates" unique_id=297486023 groups=["final_gate"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7448511, 0, 100.93437)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/finall gate" unique_id=189871544]

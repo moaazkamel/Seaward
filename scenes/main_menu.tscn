@@ -17,44 +17,80 @@ color = Color(0.015686275, 0.5176471, 0.6039216, 1)
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1473905602]
 texture_filter = 1
-offset_left = 445.0
-offset_top = 191.0
-offset_right = 509.00003
-offset_bottom = 231.0
-scale = Vector2(4.639995, 4.8800006)
+offset_left = 466.0
+offset_top = 228.0
+offset_right = 530.0
+offset_bottom = 268.0
+scale = Vector2(3.7199926, 3.8000019)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_wu84c")
-metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1302192480]
+texture_filter = 1
+offset_left = 466.0
+offset_top = 228.0
+offset_right = 530.0
+offset_bottom = 268.0
+scale = Vector2(3.7199926, 3.8000019)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_wu84c")
 
 [node name="TextureButton2" type="TextureButton" parent="." unique_id=2062542177]
 texture_filter = 1
-offset_left = 445.0
-offset_top = 341.0
-offset_right = 509.00003
-offset_bottom = 381.0
-scale = Vector2(4.639995, 4.8800006)
+offset_left = 466.0
+offset_top = 340.00003
+offset_right = 530.0
+offset_bottom = 380.00003
+scale = Vector2(3.7199926, 3.8000019)
 texture_normal = ExtResource("2_wu84c")
 
 [node name="Label" type="Label" parent="." unique_id=1946095208]
-offset_left = 526.0
-offset_top = 212.0
-offset_right = 667.0
-offset_bottom = 277.0
+offset_left = 529.0
+offset_top = 243.0
+offset_right = 670.0
+offset_bottom = 308.0
+scale = Vector2(0.80172336, 0.7786888)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 64
 text = "PLAY"
 
+[node name="Label3" type="Label" parent="." unique_id=1834340820]
+offset_left = 398.0
+offset_top = 20.0
+offset_right = 891.0
+offset_bottom = 150.0
+scale = Vector2(0.80172336, 0.7786888)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 128
+text = "Seaward"
+
+[node name="Label4" type="Label" parent="." unique_id=39051963]
+offset_left = 11.000004
+offset_top = 514.0
+offset_right = 731.0
+offset_bottom = 819.0
+scale = Vector2(0.80172336, 0.7786888)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 64
+text = "Made by:
+Moaaz Kamel"
+
 [node name="Label2" type="Label" parent="." unique_id=1354593484]
-offset_left = 526.0
-offset_top = 362.0
-offset_right = 667.0
-offset_bottom = 427.0
+offset_left = 529.0
+offset_top = 357.0
+offset_right = 670.0
+offset_bottom = 422.0
+scale = Vector2(0.80172336, 0.7786888)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 64
 text = "QUIT"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
