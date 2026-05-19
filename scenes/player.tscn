@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://lomxccquhq4k"]
+
+[ext_resource type="PackedScene" uid="uid://bcawcr08cypf1" path="res://Models/GLB format/boat-speed-a.glb" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://px0vyri6b0as" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
+size = Vector3(1.689209, 1.1859131, 3.0057526)
+
+[node name="Player" type="CharacterBody3D" unique_id=1282190994]
+script = ExtResource("1_g2els")
+
+[node name="boat" parent="." unique_id=165073262 instance=ExtResource("1_3vyb7")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1487690235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03161621, 0.5923462, 0.012299538)
+shape = SubResource("BoxShape3D_g2els")
+
+[node name="Neck" type="Node3D" parent="." unique_id=818203556]
+
+[node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1618414474]
+transform = Transform3D(-1, 1.3675936e-08, -8.634646e-08, 0, 0.98768836, 0.15643448, 8.742278e-08, 0.15643448, -0.98768836, 0, 2.5, -4.18)
