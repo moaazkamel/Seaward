@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dj0wbgivta50y"]
+
+[ext_resource type="Script" uid="uid://by124pfgv6k0l" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://qxb6wydswyl7" path="res://01_Flat_Theme/Sprites/UI_Flat_Banner04a.png" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://iwaxegao0f83" path="res://Models/ARCADECLASSIC.TTF" id="3_8ln24"]
+
+[node name="Main_Menu" type="Node2D" unique_id=1530608223]
+script = ExtResource("1_bqqt6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1381760136]
+offset_left = -120.999985
+offset_top = -76.00001
+offset_right = -80.999985
+offset_bottom = -36.000008
+scale = Vector2(35.814205, 20.639997)
+color = Color(0.015686275, 0.5176471, 0.6039216, 1)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1473905602]
+texture_filter = 1
+offset_left = 445.0
+offset_top = 191.0
+offset_right = 509.00003
+offset_bottom = 231.0
+scale = Vector2(4.639995, 4.8800006)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_wu84c")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=2062542177]
+texture_filter = 1
+offset_left = 445.0
+offset_top = 341.0
+offset_right = 509.00003
+offset_bottom = 381.0
+scale = Vector2(4.639995, 4.8800006)
+texture_normal = ExtResource("2_wu84c")
+
+[node name="Label" type="Label" parent="." unique_id=1946095208]
+offset_left = 526.0
+offset_top = 212.0
+offset_right = 667.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 64
+text = "PLAY"
+
+[node name="Label2" type="Label" parent="." unique_id=1354593484]
+offset_left = 526.0
+offset_top = 362.0
+offset_right = 667.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 64
+text = "QUIT"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

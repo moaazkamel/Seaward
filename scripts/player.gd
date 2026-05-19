@@ -2,9 +2,9 @@ extends CharacterBody3D
 
 
 @export var acceleratrion: float = 10.0
-@export var max_speed: float = 10.0
-@export var turn_speed: float = 0.5
-@export var drag: float = 0.5
+@export var max_speed: float = 40.0
+@export var turn_speed: float = 1.2
+@export var drag: float = 0.2
 
 var Velocity: Vector3 = Vector3.ZERO
 var direction: Vector3 = Vector3.FORWARD

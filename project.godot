@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Seaward"
-run/main_scene="uid://dd7bl4hld3bjj"
+run/main_scene="uid://dj0wbgivta50y"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=4
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
