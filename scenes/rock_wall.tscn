@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dqnbjeh76icn4"]
+
+[ext_resource type="PackedScene" uid="uid://dbn8s5s2n4am6" path="res://Models/GLB format/cargo-pile-b.glb" id="1_ng4d6"]
+[ext_resource type="PackedScene" uid="uid://ck5vu3qjl257e" path="res://Models/GLB format/cargo-pile-a.glb" id="2_cpynl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t26b0"]
+size = Vector3(224.20035, 60.191223, 147.44914)
+
+[node name="Rock-wall" type="StaticBody3D" unique_id=2081153531]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2066749463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.503178, 30.275856, -0.6837845)
+shape = SubResource("BoxShape3D_t26b0")
+
+[node name="cargo-pile-b2" parent="." unique_id=323072162 instance=ExtResource("1_ng4d6")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="cargo-pile-a2" parent="." unique_id=644558613 instance=ExtResource("2_cpynl")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 97.107925, 0, 0)

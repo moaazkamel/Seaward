@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://co7xtp2tt62rf"]
+
+[ext_resource type="PackedScene" uid="uid://b8ol4yjeuipwt" path="res://Models/GLB format/ship-cargo-c.glb" id="1_mn08x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i5rwo"]
+size = Vector3(3.6889648, 2.4447021, 10.5303955)
+
+[node name="large-ship" type="StaticBody3D" unique_id=1508818215]
+
+[node name="ship-cargo-c2" parent="." unique_id=341732797 instance=ExtResource("1_mn08x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1014269873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005126953, 1.218811, -0.0004272461)
+shape = SubResource("BoxShape3D_i5rwo")

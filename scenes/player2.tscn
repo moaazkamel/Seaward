@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://buo6wbcuh688a"]
+
+[ext_resource type="Script" uid="uid://px0vyri6b0as" path="res://scripts/player.gd" id="1_agjl5"]
+[ext_resource type="PackedScene" uid="uid://dx1giunvpfetc" path="res://Models/GLB format/boat-speed-b.glb" id="3_agjl5"]
+[ext_resource type="FontFile" uid="uid://iwaxegao0f83" path="res://Models/ARCADECLASSIC.TTF" id="3_hb4is"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
+size = Vector3(1.689209, 1.1080933, 3.0057526)
+
+[node name="Player" type="CharacterBody3D" unique_id=1282190994]
+script = ExtResource("1_agjl5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1487690235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03161621, 0.6312561, 0.012299538)
+shape = SubResource("BoxShape3D_g2els")
+
+[node name="Neck" type="Node3D" parent="." unique_id=818203556]
+
+[node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1618414474]
+transform = Transform3D(-1, 1.3675936e-08, -8.634646e-08, 0, 0.98768836, 0.15643448, 8.742278e-08, 0.15643448, -0.98768836, 0, 2.5, -4.18)
+
+[node name="Label" type="Label" parent="Neck/Camera3D" unique_id=485841461]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_hb4is")
+theme_override_font_sizes/font_size = 64
+text = "Gates  left: "
+
+[node name="boat-speed-b2" parent="." unique_id=53227897 instance=ExtResource("3_agjl5")]
