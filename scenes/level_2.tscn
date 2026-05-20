@@ -63,7 +63,7 @@ mesh = SubResource("BoxMesh_4nkto")
 [node name="Gates" type="Node" parent="." unique_id=1106119168]
 
 [node name="Gate" type="Area3D" parent="Gates" unique_id=606081745 groups=["gates"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.027931, 0, -50.942707)
+transform = Transform3D(0.75011104, 0, -0.66131186, 0, 1, 0, 0.66131186, 0, 0.75011104, -16.474953, 0, -50.942707)
 
 [node name="gate2" parent="Gates/Gate" unique_id=388256741 instance=ExtResource("3_wo48x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
@@ -73,7 +73,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112
 shape = SubResource("BoxShape3D_rus8k")
 
 [node name="Gate3" type="Area3D" parent="Gates" unique_id=576804405 groups=["gates"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.294678, 0, -5.3256893)
+transform = Transform3D(0.64811987, 0, 0.7615383, 0, 1, 0, -0.7615383, 0, 0.64811987, 44.294678, 0, -5.3256893)
 
 [node name="gate2" parent="Gates/Gate3" unique_id=1053881731 instance=ExtResource("3_wo48x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
@@ -83,7 +83,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112
 shape = SubResource("BoxShape3D_rus8k")
 
 [node name="Gate4" type="Area3D" parent="Gates" unique_id=1596527261 groups=["gates"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.381275, 0, 46.40754)
+transform = Transform3D(0.40354535, 0, -0.91495967, 0, 1, 0, 0.91495967, 0, 0.40354535, -9.118535, 0, 46.40754)
 
 [node name="gate2" parent="Gates/Gate4" unique_id=1710637024 instance=ExtResource("3_wo48x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
@@ -93,7 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112
 shape = SubResource("BoxShape3D_rus8k")
 
 [node name="Gate8" type="Area3D" parent="Gates" unique_id=1108015536 groups=["gates"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.261995, 0, 81.25285)
+transform = Transform3D(0.7193398, 0, 0.6946584, 0, 1, 0, -0.6946584, 0, 0.7193398, 21.879753, 0, 78.40624)
 
 [node name="gate2" parent="Gates/Gate8" unique_id=1104850215 instance=ExtResource("3_wo48x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
@@ -103,7 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112
 shape = SubResource("BoxShape3D_rus8k")
 
 [node name="finall gate" type="Area3D" parent="Gates" unique_id=297486023 groups=["final_gate"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1955595, 0, 110.29183)
+transform = Transform3D(0.75011104, 0, -0.66131186, 0, 1, 0, 0.66131186, 0, 0.75011104, 6.9343023, 0, 115.42622)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/finall gate" unique_id=189871544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
@@ -133,15 +133,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 142.
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -129.69518, -6.826725, -31.872673)
 
 [node name="Player" parent="." unique_id=1282190994 instance=ExtResource("4_eqxsl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -71.639755)
+transform = Transform3D(0.75011104, 0, -0.66131186, 0, 1, 0, 0.66131186, 0, 0.75011104, 0, 0, -71.639755)
 
 [node name="large-ship3" type="Node" parent="." unique_id=1203123593]
 
 [node name="large-ship" parent="large-ship3" unique_id=1508818215 instance=ExtResource("5_wo48x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.033419, 0, -12.4598465)
+transform = Transform3D(0.8377187, 0, -0.5461019, 0, 1, 0, 0.5461019, 0, 0.8377187, 11.033419, 0.17989492, -0.9257221)
 
 [node name="large-ship2" parent="large-ship3" unique_id=1359583709 instance=ExtResource("5_wo48x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.460632, 0, 32.300858)
+transform = Transform3D(0.8377187, 0, 0.5461019, 0, 1, 0, -0.5461019, 0, 0.8377187, -22.083355, 0.2813959, 83.18622)
 
 [connection signal="body_entered" from="Gates/Gate" to="." method="_on_gate_body_entered"]
 [connection signal="body_entered" from="Gates/Gate3" to="." method="_on_gate_3_body_entered"]

@@ -11,7 +11,7 @@ extends CharacterBody3D
 
 func _physics_process(delta: float) -> void:
 	
-	
+
 	
 	var turn = Input.get_axis("ui_right", "ui_left")
 	rotate_y(turn * turn_speed * delta)

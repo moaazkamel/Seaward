@@ -45,9 +45,9 @@ material = SubResource("StandardMaterial3D_fcfvj")
 [sub_resource type="BoxShape3D" id="BoxShape3D_rus8k"]
 size = Vector3(6.003784, 4.666504, 1.0501709)
 
-[node name="Level-2" type="Node3D" unique_id=1029657183]
+[node name="Level-3" type="Node3D" unique_id=1029657183]
 script = ExtResource("1_1pn4d")
-next_level_scene = "uid://ck0v7ogynilw8"
+next_level_scene = "uid://cgy5jk4ru80bh"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=611392562]
 environment = SubResource("Environment_5xbjy")
@@ -255,13 +255,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -129
 [node name="large-ship3" type="Node" parent="." unique_id=1203123593]
 
 [node name="large-ship" parent="large-ship3" unique_id=1508818215 instance=ExtResource("6_wae8j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.983189, 0, 1.7188797)
+transform = Transform3D(0.9583226, 0, -0.28568837, 0, 1, 0, 0.28568837, 0, 0.9583226, 11.288166, -0.90991175, -14.740444)
 
 [node name="large-ship2" parent="large-ship3" unique_id=1359583709 instance=ExtResource("6_wae8j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.487289, 0, 26.918983)
+transform = Transform3D(0.9077775, 0, 0.4194521, 0, 1, 0, -0.4194521, 0, 0.9077775, -9.212548, -0.9244257, 26.918983)
 
 [node name="Player" parent="." unique_id=1282190994 instance=ExtResource("4_1pn4d")]
-transform = Transform3D(0.8377187, 0, -0.5461019, 0, 1, 0, 0.5461019, 0, 0.8377187, 0, 0, -64.14511)
+transform = Transform3D(0.8377187, 0, -0.5461019, 0, 1, 0, 0.5461019, 0, 0.8377187, 0, -0.8693729, -64.14511)
 
 [connection signal="body_entered" from="Gates/Gate" to="." method="_on_gate_body_entered"]
 [connection signal="body_entered" from="Gates/Gate2" to="." method="_on_gate_body_entered"]

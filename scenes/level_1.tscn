@@ -115,7 +115,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112
 shape = SubResource("BoxShape3D_rus8k")
 
 [node name="finall gate" type="Area3D" parent="Gates" unique_id=297486023 groups=["final_gate"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7448511, 0, 100.93437)
+transform = Transform3D(0.8377187, 0, -0.5461019, 0, 1, 0, 0.5461019, 0, 0.8377187, -1.7448511, 0, 100.93437)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/finall gate" unique_id=189871544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
@@ -147,10 +147,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -129
 [node name="large-ship3" type="Node" parent="." unique_id=1748906150]
 
 [node name="large-ship" parent="large-ship3" unique_id=1508818215 instance=ExtResource("5_fcfvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.613594, 0, -33.512665)
+transform = Transform3D(0.9612617, 0, -0.27563736, 0, 1, 0, 0.27563736, 0, 0.9612617, 28.842308, 0.2725227, -22.879972)
 
 [node name="large-ship2" parent="large-ship3" unique_id=1359583709 instance=ExtResource("5_fcfvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.985748, 0, 67.082146)
+transform = Transform3D(0.9077775, 0, 0.4194521, 0, 1, 0, -0.4194521, 0, 0.9077775, -25.985748, 0.21858597, 67.082146)
 
 [connection signal="body_entered" from="Gates/Gate" to="." method="_on_gate_body_entered"]
 [connection signal="body_entered" from="Gates/Gate3" to="." method="_on_gate_3_body_entered"]
