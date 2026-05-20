@@ -1,3 +1,150 @@
 [gd_scene format=3 uid="uid://dsryfbaiw6es8"]
 
-[node name="Level_2" type="Node3D" unique_id=683628357]
+[ext_resource type="Script" uid="uid://dewdqoh80g3aw" path="res://scripts/level_1.gd" id="1_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://dlfjjdd3fyxng" path="res://Models/GLB format/gate.glb" id="3_wo48x"]
+[ext_resource type="PackedScene" uid="uid://buo6wbcuh688a" path="res://scenes/player2.tscn" id="4_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://bbtqgwicdmgp5" path="res://Models/GLB format/gate-finish.glb" id="4_y0kc7"]
+[ext_resource type="PackedScene" uid="uid://co7xtp2tt62rf" path="res://scenes/large_ship.tscn" id="5_wo48x"]
+[ext_resource type="PackedScene" uid="uid://dqnbjeh76icn4" path="res://scenes/rock_wall.tscn" id="6_y0kc7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
+sky_top_color = Color(0.1429359, 0.24441573, 0.6005751, 1)
+sky_horizon_color = Color(0.36016393, 0.5941082, 0.6573943, 1)
+
+[sub_resource type="Sky" id="Sky_bswci"]
+sky_material = SubResource("ProceduralSkyMaterial_014kd")
+
+[sub_resource type="Environment" id="Environment_5xbjy"]
+background_mode = 2
+sky = SubResource("Sky_bswci")
+tonemap_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_rus8k"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5xbjy"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4nkto"]
+noise = SubResource("FastNoiseLite_5xbjy")
+color_ramp = SubResource("Gradient_rus8k")
+seamless = true
+as_normal_map = true
+seamless_blend_skirt = 1.0
+bump_strength = 10.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcfvj"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0.16862746, 0.37254903, 0.5647059, 0.5882353)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_4nkto")
+
+[sub_resource type="BoxMesh" id="BoxMesh_4nkto"]
+material = SubResource("StandardMaterial3D_fcfvj")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rus8k"]
+size = Vector3(6.194092, 4.666504, 1.1071777)
+
+[node name="Level-2" type="Node3D" unique_id=1029657183]
+script = ExtResource("1_eqxsl")
+next_level_scene = "uid://ck0v7ogynilw8"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=611392562]
+environment = SubResource("Environment_5xbjy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=542080261]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1202041068]
+transform = Transform3D(-232.93063, 0, 2.3238106e-05, 0, 0.85859734, 0, -2.0363443e-05, 0, -265.813, 0, 0, 25.845413)
+mesh = SubResource("BoxMesh_4nkto")
+
+[node name="Gates" type="Node" parent="." unique_id=1106119168]
+
+[node name="Gate" type="Area3D" parent="Gates" unique_id=606081745 groups=["gates"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.027931, 0, -50.942707)
+
+[node name="gate2" parent="Gates/Gate" unique_id=388256741 instance=ExtResource("3_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/Gate" unique_id=2143829377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
+shape = SubResource("BoxShape3D_rus8k")
+
+[node name="Gate3" type="Area3D" parent="Gates" unique_id=576804405 groups=["gates"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.294678, 0, -5.3256893)
+
+[node name="gate2" parent="Gates/Gate3" unique_id=1053881731 instance=ExtResource("3_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/Gate3" unique_id=1781862074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
+shape = SubResource("BoxShape3D_rus8k")
+
+[node name="Gate4" type="Area3D" parent="Gates" unique_id=1596527261 groups=["gates"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.381275, 0, 46.40754)
+
+[node name="gate2" parent="Gates/Gate4" unique_id=1710637024 instance=ExtResource("3_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/Gate4" unique_id=1625869255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
+shape = SubResource("BoxShape3D_rus8k")
+
+[node name="Gate8" type="Area3D" parent="Gates" unique_id=1108015536 groups=["gates"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.261995, 0, 81.25285)
+
+[node name="gate2" parent="Gates/Gate8" unique_id=1104850215 instance=ExtResource("3_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193066)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/Gate8" unique_id=1820895696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
+shape = SubResource("BoxShape3D_rus8k")
+
+[node name="finall gate" type="Area3D" parent="Gates" unique_id=297486023 groups=["final_gate"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1955595, 0, 110.29183)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gates/finall gate" unique_id=189871544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54016113, 2.3287022, 5.112689)
+shape = SubResource("BoxShape3D_rus8k")
+
+[node name="gate-finish2" parent="Gates/finall gate" unique_id=1876133666 instance=ExtResource("4_y0kc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5405488, 0, 5.1193085)
+
+[node name="Rock" type="Node" parent="." unique_id=138535453]
+
+[node name="Rock-wall" parent="Rock" unique_id=2081153531 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.14425, -6.826725, -145.60358)
+
+[node name="Rock-wall2" parent="Rock" unique_id=1444461984 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.14425, -6.826725, 209.48996)
+
+[node name="Rock-wall3" parent="Rock" unique_id=1928241639 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -133.61963, -6.826725, 173.41486)
+
+[node name="Rock-wall5" parent="Rock" unique_id=916330893 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 131.31142, -6.826725, 173.41486)
+
+[node name="Rock-wall4" parent="Rock" unique_id=1355549695 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 142.56104, -6.826725, -19.729004)
+
+[node name="Rock-wall6" parent="Rock" unique_id=1566253791 instance=ExtResource("6_y0kc7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -129.69518, -6.826725, -31.872673)
+
+[node name="Player" parent="." unique_id=1282190994 instance=ExtResource("4_eqxsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -71.639755)
+
+[node name="large-ship3" type="Node" parent="." unique_id=1203123593]
+
+[node name="large-ship" parent="large-ship3" unique_id=1508818215 instance=ExtResource("5_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.033419, 0, -12.4598465)
+
+[node name="large-ship2" parent="large-ship3" unique_id=1359583709 instance=ExtResource("5_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.460632, 0, 32.300858)
+
+[connection signal="body_entered" from="Gates/Gate" to="." method="_on_gate_body_entered"]
+[connection signal="body_entered" from="Gates/Gate3" to="." method="_on_gate_3_body_entered"]
+[connection signal="body_entered" from="Gates/Gate4" to="." method="_on_gate_4_body_entered"]
+[connection signal="body_entered" from="Gates/Gate8" to="." method="_on_gate_8_body_entered"]
+[connection signal="body_entered" from="Gates/finall gate" to="." method="_on_finall_gate_body_entered"]
