@@ -1,38 +1,57 @@
-Seaward game:
+Seaward
 
-It's a 3D game where the player is in the form of a boat aiming for victory.
+A responsive 3D arcade-style boat platformer built to test and refine core movement mechanics and dynamic level progression in the Godot Engine.
 
-Gameplay:
+---
 
-The player's goal is to pass through all the gates to advance to the next level until all levels are completed.
+Gameplay & Objective
 
-Controls:
+In **Seaward**, you pilot a fast-paced boat through challenging aquatic courses. Your primary objective is to navigate and pass through all designated gates scattered across the map. Once all gates are successfully cleared, the final gate unlocks, granting passage to the next level.
 
-Move: wasd
+Controls
+W / Up Arrow: Move Forward
+S/ Down Arrow: Move Backward
+A/ Left Arrow: Turn Left
+D / Right Arrow: Turn Right
 
+---
+Features
 
-Features:
+Arcade Boat Physics: Responsive, snappy, and instant handling designed for precision maneuvering without frustrating drift.
+Dynamic Gate System: Built using an automated group-tagging architecture (gates and final_gate) that scales automatically with any custom level layout.
+Unique Node Identification: Robust player tracking ensures precise collision detection without relying on strict hardcoded pathing.
+Clean UI: Real-time on-screen counter tracking remaining objectives dynamically.
 
-Smooth and responsive player movement Challenging platform design.
+---
 
-Built With:
+Built With
 
-Godot Engine
+Engine: [Godot Engine v4.x](https://godotengine.org/)
+Language: GDScript
 
-Screenshots:
+---
 
-<img width="2879" height="1619" alt="Screenshot 2026-05-20 180439" src="https://github.com/user-attachments/assets/c4175e52-0fc8-43ca-91a8-44d7873ff2bf" />
+## 📸 Screenshots
 
+<p align="center">
+  <img width="100%" alt="Seaward Gameplay Screenshot" src="https://github.com/user-attachments/assets/c4175e52-0fc8-43ca-91a8-44d7873ff2bf" />
+</p>
 
+---
 
-Inspiration:
+Inspiration & Background
 
-This project was created as a practice in building 3D platformer mechanics using Godot.The goal was to focus on smooth movement, simple design, and core gameplay experience.
+This project was developed as a hands-on practical exercise to master 3D environment scaling, signal handling, and player physics isolation in Godot. The development focus was placed entirely on achieving low-latency control feedback, minimal code overhead, and a polished core gameplay loop.
 
-Future Improvements:
+---
 
-Add sound effects and background music Create multiple levels Add timer system Improve UI and main menu
+Future Improvements
 
-Author:
+Audio Design: Implement immersive ambient water loops, motor acceleration sound effects, and rewarding gate-collection cues.
+Level Expansion: Design multi-tiered environments utilizing procedural asset placement.
+Time Attack Mode: Introduce an active timer countdown and local high-score saving system to increase replay ability.
+UI/UX Overhaul: Create a fully realized main menu, pause state settings, and animated HUD transitions.
 
-Moaaz Kamel
+---
+Author
+Moaaz Kamel - Core Development & Design - [GitHub Profile](https://github.com/MoaazKamel)
