@@ -26,18 +26,18 @@ Language: GD Script
 
 
 Screenshots:
- 
+<img width="2879" height="1619" alt="Screenshot 2026-05-20 180439" src="https://github.com/user-attachments/assets/5549a725-0b41-4bd0-a74e-f4dc73a6bb1d" />
 
 Background & Inspiration:
 
 This project was designed as a practical hands-on exercise to learn how to scale 3D environments, work with signals and isolate player physics in Godot. The whole development focus was on low-latency control feedback, minimal code overhead and a polished core gameplay loop.
 
 Future Improvements:
+
 Audio Design: Design immersive ambient water loops, motor acceleration sound effects, and satisfying gate-collection cues.
 Multi-Tiered Environments: Build multi-tiered environments through procedural placement of assets.
 Time Attack Mode: Add an active timer countdown and local high score saving system to increase replay ability.
 UI/UX Overhaul: Main menu and settings for paused state and animated HUD transitions.
 
 Author:
-
 Moaaz Kamel
